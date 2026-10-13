@@ -1,0 +1,267 @@
+/* ==========================================================
+   Solutions Overview Page Styling
+   Aligned Matter & HD Picture + Zero Extra Space + Equal Cards
+   ========================================================== */
+
+.sol-overview-page {
+  width: 100%;
+  background-color: #FAF7F2;
+  color: #24212A;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------------------------
+   1. Hero Section: Perfectly Aligned Text & HD Picture
+   ---------------------------------------------------------- */
+.sol-overview-hero {
+  position: relative;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FFF8EB 50%, #FAF5EB 100%);
+  border-bottom: 1px solid rgba(217, 165, 46, 0.16);
+  padding: 85px 0 20px;
+}
+
+.sol-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.sol-hero-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-hero-badge {
+  display: inline-block;
+  color: #D9A52E;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.sol-hero-headline {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.2rem, 3.4vw, 3.1rem);
+  font-weight: 800;
+  color: #1D1714;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.sol-hero-accent-bar {
+  width: 44px;
+  height: 3px;
+  background: #D9A52E;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.sol-hero-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: #55504A;
+  margin-bottom: 22px;
+  max-width: 520px;
+}
+
+.sol-hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background: #1D1714;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(29, 23, 20, 0.15);
+}
+
+.sol-hero-cta-btn:hover {
+  background: #2E241E;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 23, 20, 0.22);
+}
+
+.sol-hero-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sol-hero-visual-img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ----------------------------------------------------------
+   2. Solutions Three-Pillars Cards Section (Equal size, No dead space)
+   ---------------------------------------------------------- */
+.sol-cards-section {
+  padding: 24px 0 36px;
+  background-color: #FAF6EE;
+}
+
+.sol-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.sol-cards-grid > * {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.sol-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 18px 20px 16px;
+  border: 1px solid rgba(217, 165, 46, 0.18);
+  box-shadow: 0 3px 12px rgba(29, 23, 20, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sol-card:hover {
+  transform: translateY(-3px);
+  border-color: #D9A52E;
+  box-shadow: 0 10px 22px rgba(217, 165, 46, 0.12);
+}
+
+.sol-card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sol-card-icon-bubble {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFF6E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9A52E;
+  border: 1px solid rgba(217, 165, 46, 0.22);
+}
+
+.sol-card-sparkle {
+  color: #D9A52E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sol-card-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1D1714;
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+.sol-card-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #55504A;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.sol-card-lead {
+  color: #24212A;
+  font-weight: 600;
+}
+
+.sol-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #D9A52E;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  z-index: 1;
+}
+
+.sol-card-link:hover {
+  color: #B57F14;
+  transform: translateX(3px);
+}
+
+.sol-card-corner-shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(circle at bottom right, rgba(235, 203, 137, 0.32) 0%, rgba(245, 225, 178, 0.12) 50%, transparent 72%);
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   Responsive Adjustments
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .sol-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+  
+  .sol-hero-text-col {
+    align-items: center;
+  }
+  
+  .sol-hero-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sol-hero-cta-btn {
+    align-self: center;
+  }
+  
+  .sol-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sol-overview-hero {
+    padding: 80px 0 16px;
+  }
+  
+  .sol-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

@@ -7,6 +7,7 @@ import {
 } from "react-router";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
+import { BloomTransition } from "./components/common/BloomTransition";
 import "./index.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -20,6 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <div className="app-layout">
+          <BloomTransition />
           <Navbar />
           <main style={{ flex: 1 }}>
             {children}

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
   const location = useLocation();
 
   const handleMobileClick = () => {
@@ -14,11 +15,25 @@ export const Navbar: React.FC = () => {
     setDropdownOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    setDropdownOpen(false);
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const industries = [
-    { name: 'Education', desc: 'Digital growth for education institutions', href: '/industries/education' },
-    { name: 'Healthcare', desc: 'Digital growth for healthcare organizations', href: '/industries/healthcare' },
-    { name: 'Technology & IT', desc: 'Digital growth for tech organizations', href: '/industries/technology' },
-    { name: 'Professional Services', desc: 'Digital growth for professional firms', href: '/industries/professional-services' }
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Professionals', href: '/industries/professional-services' }
   ];
 
   return (
@@ -34,13 +49,19 @@ export const Navbar: React.FC = () => {
             </li>
             
             <li 
+              ref={dropdownRef}
               className="nav-dropdown-wrapper" 
               onMouseEnter={() => !mobileMenuOpen && setDropdownOpen(true)}
               onMouseLeave={() => !mobileMenuOpen && setDropdownOpen(false)}
             >
               <button 
+                type="button"
                 className={`nav-link nav-dropdown-btn ${location.pathname.includes('/industries') ? 'active' : ''}`}
-                onClick={() => mobileMenuOpen && setDropdownOpen(!dropdownOpen)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setDropdownOpen((prev) => !prev);
+                }}
+                aria-expanded={dropdownOpen}
               >
                 Industries <ChevronDown size={16} className={`dropdown-chevron ${dropdownOpen ? 'rotated' : ''}`} />
               </button>
@@ -48,12 +69,12 @@ export const Navbar: React.FC = () => {
               <AnimatePresence>
                 {dropdownOpen && (
                   <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 5 }}
-                    transition={{ duration: 0.2 }}
+                    initial={{ opacity: 0, y: 6, x: mobileMenuOpen ? 0 : '-50%' }}
+                    animate={{ opacity: 1, y: 0, x: mobileMenuOpen ? 0 : '-50%' }}
+                    exit={{ opacity: 0, y: 4, x: mobileMenuOpen ? 0 : '-50%' }}
+                    transition={{ duration: 0.18 }}
                     className="nav-dropdown"
-                    style={mobileMenuOpen ? { transform: 'none', left: 0 } : { transform: 'translateX(-50%)', left: '50%' }}
+                    style={mobileMenuOpen ? { left: 0 } : { left: '50%' }}
                   >
                     {industries.map((ind) => (
                       <Link 
@@ -63,10 +84,7 @@ export const Navbar: React.FC = () => {
                         aria-current={location.pathname === ind.href ? 'page' : undefined}
                         onClick={handleMobileClick}
                       >
-                        <div className="dropdown-item-content">
-                          <span className="dropdown-item-title">{ind.name}</span>
-                          <span className="dropdown-item-desc">{ind.desc}</span>
-                        </div>
+                        <span className="dropdown-item-title">{ind.name}</span>
                         <span className="dropdown-item-arrow">→</span>
                       </Link>
                     ))}

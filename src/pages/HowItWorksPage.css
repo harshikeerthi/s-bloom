@@ -1,0 +1,223 @@
+/* ==========================================================
+   How It Works Page Styles
+   Exact match to user reference design (media_1791889177009.png)
+   ========================================================== */
+
+.hiw-page {
+  width: 100%;
+  background-color: #FAF7F2;
+  color: #24212A;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------------------------
+   1. Hero Section: Coordinated Strategy & Execution
+   ---------------------------------------------------------- */
+.hiw-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #FFFCF7 0%, #FFF8EB 50%, #FAF5EB 100%);
+  border-bottom: 1px solid rgba(217, 165, 46, 0.16);
+  padding: 85px 0 20px;
+}
+
+.hiw-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.hiw-hero-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hiw-hero-badge {
+  display: inline-block;
+  color: #D9A52E;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hiw-hero-headline {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.3rem, 3.6vw, 3.3rem);
+  font-weight: 800;
+  color: #1D1714;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.hiw-hero-accent-bar {
+  width: 44px;
+  height: 3px;
+  background: #D9A52E;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.hiw-hero-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: #55504A;
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+.hiw-hero-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiw-hero-visual-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ----------------------------------------------------------
+   2. Process Roadmap Section (5 Steps with Connecting Line)
+   ---------------------------------------------------------- */
+.hiw-process-section {
+  padding: 40px 0 54px;
+  background-color: #FAF6EE;
+}
+
+.hiw-timeline-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Gold track running behind the step number badges */
+.hiw-timeline-track {
+  position: absolute;
+  top: 10px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: rgba(217, 165, 46, 0.45);
+  z-index: 0;
+}
+
+.hiw-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hiw-step-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAF6EE;
+  color: #D9A52E;
+  border: 1.5px solid #D9A52E;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 2px 9px;
+  margin-bottom: 14px;
+  box-shadow: 0 0 0 4px #FAF6EE;
+  z-index: 2;
+}
+
+.hiw-step-icon-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFF6E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9A52E;
+  border: 1px solid rgba(217, 165, 46, 0.25);
+  margin-bottom: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(29, 23, 20, 0.03);
+}
+
+.hiw-step-item:hover .hiw-step-icon-bubble {
+  transform: translateY(-2px) scale(1.06);
+  background: #FAF0D6;
+  border-color: #D9A52E;
+  box-shadow: 0 6px 16px rgba(217, 165, 46, 0.2);
+}
+
+.hiw-step-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1D1714;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hiw-step-desc {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #55504A;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Responsive Adjustments
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hiw-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .hiw-hero-text-col {
+    align-items: center;
+  }
+
+  .hiw-timeline-track {
+    display: none;
+  }
+
+  .hiw-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiw-hero-section {
+    padding: 75px 0 16px;
+  }
+
+  .hiw-process-section {
+    padding: 30px 0 40px;
+  }
+
+  .hiw-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .hiw-step-item {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 10px;
+  }
+}

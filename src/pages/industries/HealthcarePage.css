@@ -1,0 +1,889 @@
+/* ==========================================================
+   S-Bloom Healthcare Industry Page Styles
+   ========================================================== */
+
+.health-page {
+  background-color: var(--bg-primary, #FFFEFC);
+  color: var(--text-primary, #24212A);
+  overflow-x: hidden;
+  padding-top: 72px; /* Fixed navbar clearance */
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+/* ----------------------------------------------------------
+   1. Hero Section
+   ---------------------------------------------------------- */
+.health-hero {
+  position: relative;
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, #FBF8F2 0%, #FFFDF9 100%);
+  border-bottom: 1px solid rgba(217, 165, 46, 0.12);
+  overflow: hidden;
+}
+
+.health-hero-ambient {
+  position: absolute;
+  top: -10%;
+  right: 0%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(217, 165, 46, 0.14) 0%, rgba(201, 149, 46, 0.04) 50%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.health-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.health-hero-content {
+  max-width: 620px;
+}
+
+.health-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #B57F14;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.health-hero-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  color: #24212A;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.health-hero-desc {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #5A5763;
+  margin-bottom: 34px;
+}
+
+.health-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-health-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #D9A52E;
+  color: #1F1B24;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(217, 165, 46, 0.25);
+  border: 1px solid #D9A52E;
+}
+
+.btn-health-primary:hover {
+  background-color: #c99524;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(217, 165, 46, 0.35);
+  color: #1F1B24;
+}
+
+.btn-health-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(36, 33, 42, 0.15);
+  color: #24212A;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-health-secondary:hover {
+  background: #FFFFFF;
+  border-color: #D9A52E;
+  transform: translateY(-2px);
+}
+
+.btn-health-secondary .play-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #24212A;
+  color: #FFFEFC;
+  font-size: 0.7rem;
+}
+
+.health-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.health-hero-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4/5;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(36, 33, 42, 0.12), 0 2px 10px rgba(217, 165, 46, 0.08);
+  border: 6px solid #FFFFFF;
+  background: #FAF7F2;
+}
+
+.health-hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.health-hero-aura-card {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(217, 165, 46, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.health-hero-aura-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(217, 165, 46, 0.15);
+  color: #D9A52E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-hero-aura-text h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #24212A;
+  margin: 0;
+}
+
+.health-hero-aura-text p {
+  font-size: 0.75rem;
+  color: #5A5763;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Stats Strip
+   ---------------------------------------------------------- */
+.health-stats-strip {
+  margin-top: 60px;
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 165, 46, 0.18);
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 10px 30px rgba(36, 33, 42, 0.04);
+}
+
+.health-stat-col {
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+.health-stat-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(36, 33, 42, 0.08);
+}
+
+.health-stat-num {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #24212A;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.health-stat-label {
+  font-size: 0.85rem;
+  color: #5A5763;
+  font-weight: 500;
+}
+
+/* ----------------------------------------------------------
+   3 Value Pillar Cards
+   ---------------------------------------------------------- */
+.health-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.health-pillar-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 165, 46, 0.16);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.health-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 165, 46, 0.4);
+  box-shadow: 0 14px 30px rgba(217, 165, 46, 0.1);
+}
+
+.health-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(217, 165, 46, 0.12);
+  color: #D9A52E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.health-pillar-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #24212A;
+  margin-bottom: 8px;
+}
+
+.health-pillar-desc {
+  font-size: 0.92rem;
+  color: #5A5763;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   2. Trust & Urgency Section
+   ---------------------------------------------------------- */
+.health-trust-section {
+  padding: 100px 0 90px;
+  background-color: #FAF7F2;
+  border-bottom: 1px solid rgba(217, 165, 46, 0.12);
+}
+
+.health-trust-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.health-trust-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #24212A;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.health-trust-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5A5763;
+}
+
+.health-trust-image-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(36, 33, 42, 0.1);
+  border: 4px solid #FFFFFF;
+}
+
+.health-trust-image-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.health-trust-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.health-trust-action-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 165, 46, 0.2);
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.health-trust-action-card:hover {
+  transform: translateY(-3px);
+  border-color: #D9A52E;
+}
+
+.health-trust-action-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(217, 165, 46, 0.12);
+  color: #D9A52E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-trust-action-label {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24212A;
+}
+
+/* ----------------------------------------------------------
+   3. Authority & Compliance Section
+   ---------------------------------------------------------- */
+.health-authority-section {
+  padding: 100px 0;
+  background-color: #FFFEFC;
+  border-bottom: 1px solid rgba(217, 165, 46, 0.12);
+}
+
+.health-authority-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.health-authority-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #24212A;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.health-authority-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5A5763;
+  margin-bottom: 34px;
+}
+
+.health-authority-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.health-check-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #FAF7F2;
+  border: 1px solid rgba(217, 165, 46, 0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.25s ease;
+}
+
+.health-check-item:hover {
+  background: #FFFDF9;
+  border-color: #D9A52E;
+  transform: translateX(4px);
+}
+
+.health-check-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(217, 165, 46, 0.15);
+  color: #B57F14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.health-check-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24212A;
+}
+
+.health-authority-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(36, 33, 42, 0.12);
+  border: 4px solid #FFFFFF;
+}
+
+.health-authority-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+/* ----------------------------------------------------------
+   4. Our Approach applied to Healthcare
+   ---------------------------------------------------------- */
+.health-approach-section {
+  padding: 100px 0;
+  background-color: #FAF7F2;
+  border-bottom: 1px solid rgba(217, 165, 46, 0.12);
+}
+
+.health-approach-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.health-approach-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #24212A;
+  margin-bottom: 16px;
+}
+
+.health-approach-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.health-approach-row-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 165, 46, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.health-approach-row-card:hover {
+  border-color: #D9A52E;
+  box-shadow: 0 16px 36px rgba(217, 165, 46, 0.12);
+  transform: translateY(-2px);
+}
+
+.health-approach-thumb {
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.health-approach-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.health-approach-row-card:hover .health-approach-thumb img {
+  transform: scale(1.04);
+}
+
+.health-approach-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.health-approach-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.health-approach-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(217, 165, 46, 0.12);
+  color: #D9A52E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-approach-label-text {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #B57F14;
+  text-transform: uppercase;
+}
+
+.health-approach-desc-text {
+  font-size: 1.05rem;
+  color: #5A5763;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   5. Ready to Grow CTA Banner & Clinic Showcase
+   ---------------------------------------------------------- */
+.health-cta-banner-section {
+  padding: 100px 0 0;
+  background: linear-gradient(180deg, #FDFBF7 0%, #F5EFE6 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.health-cta-banner-content {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 0 24px;
+}
+
+.health-cta-banner-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  font-weight: 700;
+  color: #24212A;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.btn-health-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #24212A;
+  color: #FFFEFC;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 34px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(36, 33, 42, 0.22);
+}
+
+.btn-health-dark:hover {
+  background-color: #35303D;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(36, 33, 42, 0.3);
+  color: #FFFEFC;
+}
+
+.btn-health-dark .arrow {
+  color: #D9A52E;
+  transition: transform 0.2s ease;
+}
+
+.btn-health-dark:hover .arrow {
+  transform: translateX(4px);
+}
+
+.health-showcase-photo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.health-showcase-photo-frame {
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(36, 33, 42, 0.15);
+  border: 4px solid #FFFFFF;
+  border-bottom: none;
+}
+
+.health-showcase-photo-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----------------------------------------------------------
+   6. Strategy Request / Consultation Form Section
+   ---------------------------------------------------------- */
+.health-form-section {
+  padding: 44px 0 36px;
+  background-color: #FAF7F2;
+  border-top: 1px solid rgba(217, 165, 46, 0.15);
+}
+
+.health-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.health-form-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-form-eyebrow {
+  color: #B57F14;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.health-form-headline {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #24212A;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.health-form-desc {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #5A5763;
+  margin-bottom: 34px;
+}
+
+.health-form-desk-image {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 16px 36px rgba(36, 33, 42, 0.1);
+  margin-top: 10px;
+}
+
+.health-form-desk-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.health-form-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(217, 165, 46, 0.22);
+  border-radius: 22px;
+  padding: 36px 32px;
+  box-shadow: 0 16px 40px rgba(36, 33, 42, 0.06);
+}
+
+.health-form-group {
+  margin-bottom: 20px;
+}
+
+.health-form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #24212A;
+  margin-bottom: 8px;
+}
+
+.health-form-input,
+.health-form-select,
+.health-form-textarea {
+  width: 100%;
+  background: #FAFAFA;
+  border: 1px solid #E5E0D8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #24212A;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.health-form-input:focus,
+.health-form-select:focus,
+.health-form-textarea:focus {
+  background: #FFFFFF;
+  border-color: #D9A52E;
+  box-shadow: 0 0 0 3px rgba(217, 165, 46, 0.15);
+}
+
+.health-form-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.btn-health-submit {
+  width: 100%;
+  background-color: #24212A;
+  color: #FFFEFC;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+  box-shadow: 0 6px 20px rgba(36, 33, 42, 0.15);
+}
+
+.btn-health-submit:hover {
+  background-color: #D9A52E;
+  color: #1F1B24;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 165, 46, 0.3);
+}
+
+.health-form-notice {
+  font-size: 0.78rem;
+  color: #8A8594;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.45;
+}
+
+.health-form-success {
+  background: #F4F9F2;
+  border: 1px solid #C8E3C3;
+  color: #2E6B26;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   Responsive Breakpoints
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .health-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .health-hero-content {
+    max-width: 100%;
+  }
+
+  .health-hero-ctas {
+    justify-content: center;
+  }
+  
+  .health-hero-aura-card {
+    left: 20px;
+  }
+
+  .health-trust-grid,
+  .health-authority-grid,
+  .health-form-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .health-approach-row-card {
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 0;
+  }
+
+  .health-stat-col:nth-child(2)::after {
+    display: none;
+  }
+
+  .health-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-trust-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-approach-row-card {
+    grid-template-columns: 1fr;
+  }
+
+  .health-approach-thumb {
+    height: 200px;
+  }
+
+  .health-form-card {
+    padding: 24px 20px;
+  }
+}

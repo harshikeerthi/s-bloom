@@ -162,7 +162,7 @@ export const HomePage: React.FC = () => {
 
 
       {/* SECTION 10 - Final CTA */}
-      <section style={{ padding: '120px 0', backgroundColor: 'var(--bg-primary)', textAlign: 'center' }}>
+      <section style={{ padding: '50px 0 40px', backgroundColor: 'var(--bg-primary)', textAlign: 'center' }}>
         <div className="container">
           <ScrollReveal delay={0}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Your business has potential. Let’s help the right people see it.</h2>

@@ -1,0 +1,213 @@
+/* ==========================================================
+   About Page Styles
+   Exact match to user reference design (media_1791889773740.png)
+   ========================================================== */
+
+.about-page {
+  width: 100%;
+  background-color: #FAF7F2;
+  color: #24212A;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------------------------------
+   1. Hero Section: Closing the gap between expertise and understanding
+   ---------------------------------------------------------- */
+.about-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #FFFCF7 0%, #FFF8EB 50%, #FAF5EB 100%);
+  border-bottom: 1px solid rgba(217, 165, 46, 0.16);
+  padding: 85px 0 20px;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.about-hero-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-hero-badge {
+  display: inline-block;
+  color: #D9A52E;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-hero-headline {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.3rem, 3.6vw, 3.3rem);
+  font-weight: 800;
+  color: #1D1714;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.about-hero-accent-bar {
+  width: 44px;
+  height: 3px;
+  background: #D9A52E;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.about-hero-paragraph {
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: #55504A;
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+.about-hero-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-visual-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ----------------------------------------------------------
+   2. Strategic Approach & Model Section (2 Equal Cards)
+   ---------------------------------------------------------- */
+.about-cards-section {
+  padding: 36px 0 54px;
+  background-color: #FAF6EE;
+}
+
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.about-cards-grid > * {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.about-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  border: 1px solid rgba(217, 165, 46, 0.18);
+  box-shadow: 0 4px 18px rgba(29, 23, 20, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: #D9A52E;
+  box-shadow: 0 12px 28px rgba(217, 165, 46, 0.12);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.about-card-icon-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFF6E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9A52E;
+  border: 1px solid rgba(217, 165, 46, 0.22);
+  flex-shrink: 0;
+}
+
+.about-card-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1D1714;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.about-card-accent-bar {
+  width: 36px;
+  height: 2.5px;
+  background: #D9A52E;
+  border-radius: 2px;
+}
+
+.about-card-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #55504A;
+  margin: 0;
+  flex: 1;
+}
+
+/* ----------------------------------------------------------
+   Responsive Adjustments
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .about-hero-text-col {
+    align-items: center;
+  }
+
+  .about-hero-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 75px 0 16px;
+  }
+
+  .about-cards-section {
+    padding: 26px 0 40px;
+  }
+
+  .about-card {
+    padding: 22px 20px 20px;
+  }
+}

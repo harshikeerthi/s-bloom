@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Camera, MessageCircle, Briefcase, Mail, Phone, ArrowRight, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Footer: React.FC = () => {
@@ -22,9 +21,6 @@ export const Footer: React.FC = () => {
             <p className="footer-desc">
               S-Bloom is a specialized digital growth partner for expertise-led organizations in healthcare, education, and professional services.
             </p>
-            <Link to="/contact" className="footer-cta-link">
-              Talk to sBLOOM <span className="arrow">→</span>
-            </Link>
           </div>
 
           {/* MIDDLE: Links */}
@@ -53,29 +49,16 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* BOTTOM: Bar & Interactive Contact */}
+        {/* BOTTOM: Bar */}
         <div className="footer-bottom-bar">
           <div className="footer-bottom-left">
-            <p>&copy; {new Date().getFullYear()} S-Bloom. All rights reserved.</p>
-          </div>
-          
-          <div className="footer-bottom-center">
-            <Link to="/industries/healthcare">Healthcare</Link>
-            <span className="dot">•</span>
-            <Link to="/industries/education">Education</Link>
-            <span className="dot">•</span>
-            <Link to="/industries/professional-services">Consulting</Link>
+            <p>&copy; {new Date().getFullYear()} sBLOOM. All rights reserved.</p>
           </div>
 
           <div className="footer-bottom-right">
-            <div className="contact-tiles-wrapper">
-              <ContactTile letter="C" label="Instagram" icon={<Camera size={16} />} href="https://instagram.com" external />
-              <ContactTile letter="O" label="WhatsApp" icon={<MessageCircle size={16} />} href="https://wa.me/" external />
-              <ContactTile letter="N" label="LinkedIn" icon={<Briefcase size={16} />} href="https://linkedin.com" external />
-              <ContactTile letter="T" label="Email" icon={<Mail size={16} />} href="mailto:hello@s-bloom.com" external />
-              <ContactTile letter="A" label="Phone" icon={<Phone size={16} />} href="tel:+1234567890" external />
-              <ContactTile letter="C" label="Website" icon={<Globe size={16} />} href="/" external={false} />
-              <ContactTile letter="T" label="Contact" icon={<ArrowRight size={16} />} href="/contact" external={false} />
+            <div className="footer-bottom-links">
+              <a href="#privacy" className="footer-bottom-link">Privacy Policy</a>
+              <a href="#terms" className="footer-bottom-link">Terms & Conditions</a>
             </div>
           </div>
         </div>
@@ -84,30 +67,5 @@ export const Footer: React.FC = () => {
   );
 };
 
-const ContactTile: React.FC<{ letter: string; label: string; icon: React.ReactNode; href: string; external: boolean }> = ({ letter, label, icon, href, external }) => {
-  const isInternal = !external;
+export default Footer;
 
-  const content = (
-    <>
-      <div className="tile-letter">{letter}</div>
-      <div className="tile-reveal">
-        <span className="tile-icon">{icon}</span>
-        <span className="tile-label">{label}</span>
-      </div>
-    </>
-  );
-
-  if (isInternal) {
-    return (
-      <Link to={href} className="contact-tile">
-        {content}
-      </Link>
-    );
-  }
-
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="contact-tile">
-      {content}
-    </a>
-  );
-};
