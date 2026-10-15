@@ -103,19 +103,25 @@ export const HomePage: React.FC = () => {
       {/* SECTION 2 - Dual Paths */}
       <DualPathCards />
 
-      {/* SECTION 4 - What sBLOOM Changes */}
-      <DigitalGrowthSystem />
+      {/* LOWER LUXURY SILK WRAPPER - Continuous Uninterrupted Background Canvas */}
+      <div className="home-lower-silk-wrapper">
+        {/* SECTION 4 - What sBLOOM Changes */}
+        <DigitalGrowthSystem />
 
-
-
-      {/* SECTION 6 - Why sBLOOM */}
-      <section style={{ padding: '100px 0', backgroundColor: 'var(--dark-bg)', color: 'var(--bg-primary)' }}>
-        <div className="container" style={{ display: 'flex', flexWrap: 'wrap', gap: '60px', alignItems: 'center' }}>
-          <div style={{ flex: '1', minWidth: '300px' }}>
+        {/* SECTION 10 - Final CTA */}
+        <section className="home-final-cta-section">
+          <div className="container">
             <ScrollReveal delay={0}>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>We start with your business. Then bring the right capabilities together.</h2>
+              <h2 className="home-final-cta-title">Your business has potential. Let’s help the right people see it.</h2>
+              <div className="home-final-cta-btn-wrap">
+                <Link to="/contact" className="home-final-cta-btn">
+                  <span>Talk to sBLOOM</span>
+                  <span className="cta-arrow">→</span>
+                </Link>
+              </div>
             </ScrollReveal>
           </div>
+<<<<<<< HEAD
           <div style={{ flex: '1', minWidth: '300px' }}>
             <ScrollReveal delay={150}>
               <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -172,6 +178,10 @@ export const HomePage: React.FC = () => {
           </ScrollReveal>
         </div>
       </section>
+=======
+        </section>
+      </div>
+>>>>>>> origin/main
 
       {/* Interactive Bottom-Right Corner Scroll Pipeline: Camera ➔ Reel ➔ Post ➔ Ad ➔ Website ➔ Video */}
       <BottomCornerScrollShowcase />

@@ -5,7 +5,7 @@ import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Award, Briefcase, Building2, Calendar, Camera, Check, CheckCircle2, ChevronDown, ChevronRight, FileText, Film, Globe, GraduationCap, Mail, Megaphone, Menu, MessageCircle, MonitorSmartphone, PenTool, Phone, Play, PlayCircle, Rocket, ShieldCheck, Sparkles, Target, TrendingUp, UserCheck, Volume2, VolumeX, X } from "lucide-react";
+import { ArrowRight, Award, BarChart3, BookOpen, Briefcase, Building2, Calendar, Camera, Check, CheckCircle2, ChevronDown, ChevronRight, FileText, Film, Globe, GraduationCap, Laptop, LayoutGrid, Lightbulb, Mail, Megaphone, Menu, MessageCircle, MessageSquare, MonitorSmartphone, PenTool, Pencil, Phone, Play, PlayCircle, Rocket, ShieldCheck, Sparkles, Target, TrendingUp, User, UserCheck, Users, Volume2, VolumeX, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link as Link$1 } from "react-router-dom";
 //#region \0rolldown/runtime.js
@@ -240,6 +240,7 @@ var Navbar = () => {
 //#endregion
 //#region src/components/layout/Footer.tsx
 var Footer = () => {
+	if (useLocation().pathname === "/contact") return null;
 	return /* @__PURE__ */ jsx(motion.footer, {
 		className: "footer-premium",
 		initial: {
@@ -2132,287 +2133,288 @@ var HeroSubtleCurves = () => {
 //#endregion
 //#region src/components/home/DualPathCards.tsx
 var DualPathCards = () => {
-	return /* @__PURE__ */ jsx("section", {
+	return /* @__PURE__ */ jsxs("section", {
 		className: "dual-path-section",
-		style: {
-			padding: "100px 0",
-			backgroundColor: "var(--bg-primary)"
-		},
-		children: /* @__PURE__ */ jsxs("div", {
-			className: "container",
-			children: [/* @__PURE__ */ jsx(ScrollReveal, {
-				delay: 0,
-				children: /* @__PURE__ */ jsxs("div", {
-					className: "text-center",
-					style: { marginBottom: "60px" },
-					children: [/* @__PURE__ */ jsx("h2", {
-						style: {
-							fontSize: "2.5rem",
-							color: "var(--text-primary)",
-							marginBottom: "16px"
-						},
-						children: "How can S-Bloom help you grow?"
-					}), /* @__PURE__ */ jsx("p", {
-						style: {
-							color: "var(--text-secondary)",
-							fontSize: "1.1rem",
-							maxWidth: "600px",
-							margin: "0 auto"
-						},
-						children: "Different goals. Tailored digital strategies."
-					})]
+		children: [
+			/* @__PURE__ */ jsx("div", {
+				className: "dual-path-ambient-glow",
+				"aria-hidden": "true"
+			}),
+			/* @__PURE__ */ jsx("div", {
+				className: "dual-path-curves-layer",
+				"aria-hidden": "true",
+				children: /* @__PURE__ */ jsxs("svg", {
+					className: "dual-path-curves-svg",
+					viewBox: "0 0 1440 900",
+					fill: "none",
+					xmlns: "http://www.w3.org/2000/svg",
+					preserveAspectRatio: "none",
+					children: [
+						/* @__PURE__ */ jsxs("defs", { children: [/* @__PURE__ */ jsxs("linearGradient", {
+							id: "dpWave1",
+							x1: "0%",
+							y1: "0%",
+							x2: "100%",
+							y2: "100%",
+							children: [
+								/* @__PURE__ */ jsx("stop", {
+									offset: "0%",
+									stopColor: "#E2D0B6",
+									stopOpacity: "0.45"
+								}),
+								/* @__PURE__ */ jsx("stop", {
+									offset: "50%",
+									stopColor: "#EDE0CA",
+									stopOpacity: "0.25"
+								}),
+								/* @__PURE__ */ jsx("stop", {
+									offset: "100%",
+									stopColor: "#E2D0B6",
+									stopOpacity: "0.38"
+								})
+							]
+						}), /* @__PURE__ */ jsxs("linearGradient", {
+							id: "dpWave2",
+							x1: "0%",
+							y1: "100%",
+							x2: "100%",
+							y2: "0%",
+							children: [
+								/* @__PURE__ */ jsx("stop", {
+									offset: "0%",
+									stopColor: "#DFCDAE",
+									stopOpacity: "0.35"
+								}),
+								/* @__PURE__ */ jsx("stop", {
+									offset: "60%",
+									stopColor: "#EAD8BD",
+									stopOpacity: "0.2"
+								}),
+								/* @__PURE__ */ jsx("stop", {
+									offset: "100%",
+									stopColor: "#E2D0B6",
+									stopOpacity: "0.3"
+								})
+							]
+						})] }),
+						/* @__PURE__ */ jsx("path", {
+							d: "M-40,160 C320,80 800,280 1480,140",
+							stroke: "url(#dpWave1)",
+							strokeWidth: "1.2",
+							strokeLinecap: "round"
+						}),
+						/* @__PURE__ */ jsx("path", {
+							d: "M-40,240 C380,160 840,360 1480,220",
+							stroke: "url(#dpWave2)",
+							strokeWidth: "0.9",
+							strokeLinecap: "round"
+						}),
+						/* @__PURE__ */ jsx("path", {
+							d: "M-40,740 C440,640 920,810 1480,690",
+							stroke: "url(#dpWave1)",
+							strokeWidth: "1.1",
+							strokeLinecap: "round"
+						})
+					]
 				})
-			}), /* @__PURE__ */ jsxs("div", {
-				className: "dual-path-grid",
-				style: {
-					display: "grid",
-					gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-					gap: "32px",
-					maxWidth: "1000px",
-					margin: "0 auto"
-				},
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: "dual-path-sparkles-layer",
+				"aria-hidden": "true",
+				children: [
+					/* @__PURE__ */ jsx("span", {
+						className: "dual-path-sparkle-star dp-sparkle-top-left-main",
+						children: "✦"
+					}),
+					/* @__PURE__ */ jsx("span", { className: "dual-path-sparkle-dot dp-sparkle-top-left-dot" }),
+					/* @__PURE__ */ jsx("span", {
+						className: "dual-path-sparkle-star dp-sparkle-right-main",
+						children: "✦"
+					}),
+					/* @__PURE__ */ jsx("span", { className: "dual-path-sparkle-dot dp-sparkle-right-dot" })
+				]
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: "dual-path-container",
 				children: [/* @__PURE__ */ jsx(ScrollReveal, {
-					delay: 100,
-					style: { height: "100%" },
+					delay: 0,
 					children: /* @__PURE__ */ jsxs("div", {
-						className: "path-card path-card-business",
-						style: {
-							backgroundColor: "var(--bg-secondary)",
-							border: "1px solid var(--border-subtle)",
-							borderRadius: "16px",
-							padding: "40px",
-							height: "100%",
-							display: "flex",
-							flexDirection: "column",
-							boxShadow: "0 10px 40px rgba(0,0,0,0.05)",
-							position: "relative",
-							overflow: "hidden"
-						},
-						children: [
-							/* @__PURE__ */ jsx("div", { style: {
-								position: "absolute",
-								top: 0,
-								left: 0,
-								right: 0,
-								height: "4px",
-								background: "linear-gradient(90deg, transparent, var(--gold-primary), transparent)"
-							} }),
-							/* @__PURE__ */ jsxs("h3", {
-								style: {
-									fontSize: "1.75rem",
-									color: "var(--text-primary)",
-									marginBottom: "16px",
-									display: "flex",
-									alignItems: "center",
-									gap: "12px"
-								},
-								children: [/* @__PURE__ */ jsx("span", {
-									style: {
-										display: "flex",
-										alignItems: "center",
-										justifyContent: "center",
-										width: "36px",
-										height: "36px",
-										borderRadius: "8px",
-										backgroundColor: "rgba(217, 165, 46, 0.1)",
-										color: "var(--gold-deep)"
-									},
-									children: /* @__PURE__ */ jsxs("svg", {
-										width: "20",
-										height: "20",
-										viewBox: "0 0 24 24",
-										fill: "none",
-										stroke: "currentColor",
-										strokeWidth: "2",
-										strokeLinecap: "round",
-										strokeLinejoin: "round",
-										children: [/* @__PURE__ */ jsx("path", { d: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" }), /* @__PURE__ */ jsx("path", { d: "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" })]
-									})
-								}), "sBLOOM for Business"]
-							}),
-							/* @__PURE__ */ jsx("p", {
-								style: {
-									color: "var(--text-secondary)",
-									fontSize: "0.95rem",
-									marginBottom: "32px",
-									lineHeight: "1.6"
-								},
-								children: "Build your online presence, strengthen credibility, and reach the right audience."
-							}),
-							/* @__PURE__ */ jsx("ul", {
-								style: {
-									listStyle: "none",
-									padding: 0,
-									margin: "0 0 40px 0",
-									display: "flex",
-									flexDirection: "column",
-									gap: "16px",
-									flexGrow: 1
-								},
-								children: [
-									"SEO and Google visibility",
-									"Websites and social media",
-									"Digital marketing and ads"
-								].map((item, i) => /* @__PURE__ */ jsxs("li", {
-									style: {
-										display: "flex",
-										alignItems: "flex-start",
-										gap: "12px",
-										color: "var(--text-primary)",
-										fontSize: "0.95rem"
-									},
-									children: [/* @__PURE__ */ jsx(Check, {
-										size: 18,
-										style: {
-											color: "var(--gold-primary)",
-											flexShrink: 0,
-											marginTop: "2px"
-										}
-									}), item]
-								}, i))
-							}),
-							/* @__PURE__ */ jsx(Link, {
+						className: "dual-path-header",
+						children: [/* @__PURE__ */ jsxs("h2", {
+							className: "dual-path-title",
+							children: [
+								"How can ",
+								/* @__PURE__ */ jsx("span", {
+									className: "title-highlight-gold",
+									children: "S-Bloom"
+								}),
+								" help you grow?"
+							]
+						}), /* @__PURE__ */ jsx("p", {
+							className: "dual-path-subtitle",
+							children: "Different goals. Tailored digital strategies."
+						})]
+					})
+				}), /* @__PURE__ */ jsxs("div", {
+					className: "dual-path-grid",
+					children: [/* @__PURE__ */ jsx(ScrollReveal, {
+						delay: 100,
+						style: { height: "100%" },
+						children: /* @__PURE__ */ jsxs("div", {
+							className: "dual-path-card dual-path-card-business",
+							children: [/* @__PURE__ */ jsxs("div", { children: [
+								/* @__PURE__ */ jsxs("div", {
+									className: "dual-path-card-header",
+									children: [/* @__PURE__ */ jsx("div", {
+										className: "dual-path-icon-box dual-path-icon-business",
+										children: /* @__PURE__ */ jsx(BookOpen, {
+											size: 21,
+											strokeWidth: 2
+										})
+									}), /* @__PURE__ */ jsx("h3", {
+										className: "dual-path-card-title",
+										children: "sBLOOM for Business"
+									})]
+								}),
+								/* @__PURE__ */ jsx("p", {
+									className: "dual-path-card-desc",
+									children: "Build your online presence, strengthen credibility, and reach the right audience."
+								}),
+								/* @__PURE__ */ jsxs("ul", {
+									className: "dual-path-feature-list",
+									children: [
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-business",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "SEO and Google visibility"
+											})]
+										}),
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-business",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "Websites and social media"
+											})]
+										}),
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-business",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "Digital marketing and ads"
+											})]
+										})
+									]
+								})
+							] }), /* @__PURE__ */ jsxs(Link, {
 								to: "/contact",
-								style: {
-									display: "block",
-									width: "100%",
-									padding: "16px",
-									backgroundColor: "var(--dark-bg)",
-									color: "var(--bg-primary)",
-									textAlign: "center",
-									borderRadius: "8px",
-									fontWeight: "600",
-									textDecoration: "none",
-									transition: "all 0.3s ease"
-								},
-								className: "path-btn-business",
-								children: "Grow Your Business →"
-							})
-						]
-					})
-				}), /* @__PURE__ */ jsx(ScrollReveal, {
-					delay: 200,
-					style: { height: "100%" },
-					children: /* @__PURE__ */ jsxs("div", {
-						className: "path-card path-card-creative",
-						style: {
-							backgroundColor: "var(--bg-secondary)",
-							border: "1px solid var(--border-subtle)",
-							borderRadius: "16px",
-							padding: "40px",
-							height: "100%",
-							display: "flex",
-							flexDirection: "column",
-							boxShadow: "0 10px 40px rgba(0,0,0,0.05)",
-							position: "relative",
-							overflow: "hidden"
-						},
-						children: [
-							/* @__PURE__ */ jsx("div", { style: {
-								position: "absolute",
-								top: 0,
-								left: 0,
-								right: 0,
-								height: "4px",
-								background: "linear-gradient(90deg, transparent, #9d84b7, transparent)"
-							} }),
-							/* @__PURE__ */ jsxs("h3", {
-								style: {
-									fontSize: "1.75rem",
-									color: "var(--text-primary)",
-									marginBottom: "16px",
-									display: "flex",
-									alignItems: "center",
-									gap: "12px"
-								},
-								children: [/* @__PURE__ */ jsx("span", {
-									style: {
-										display: "flex",
-										alignItems: "center",
-										justifyContent: "center",
-										width: "36px",
-										height: "36px",
-										borderRadius: "8px",
-										backgroundColor: "rgba(157, 132, 183, 0.1)",
-										color: "#9d84b7"
-									},
-									children: /* @__PURE__ */ jsxs("svg", {
-										width: "20",
-										height: "20",
-										viewBox: "0 0 24 24",
-										fill: "none",
-										stroke: "currentColor",
-										strokeWidth: "2",
-										strokeLinecap: "round",
-										strokeLinejoin: "round",
-										children: [/* @__PURE__ */ jsx("path", { d: "M12 20h9" }), /* @__PURE__ */ jsx("path", { d: "M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" })]
-									})
-								}), "Creative Workspace"]
-							}),
-							/* @__PURE__ */ jsx("p", {
-								style: {
-									color: "var(--text-secondary)",
-									fontSize: "0.95rem",
-									marginBottom: "32px",
-									lineHeight: "1.6"
-								},
-								children: "Build your personal brand, showcase your work, and attract better opportunities."
-							}),
-							/* @__PURE__ */ jsx("ul", {
-								style: {
-									listStyle: "none",
-									padding: 0,
-									margin: "0 0 40px 0",
-									display: "flex",
-									flexDirection: "column",
-									gap: "16px",
-									flexGrow: 1
-								},
-								children: [
-									"Personal branding",
-									"Portfolio and online presence",
-									"Content and audience growth"
-								].map((item, i) => /* @__PURE__ */ jsxs("li", {
-									style: {
-										display: "flex",
-										alignItems: "flex-start",
-										gap: "12px",
-										color: "var(--text-primary)",
-										fontSize: "0.95rem"
-									},
-									children: [/* @__PURE__ */ jsx(Check, {
-										size: 18,
-										style: {
-											color: "#9d84b7",
-											flexShrink: 0,
-											marginTop: "2px"
-										}
-									}), item]
-								}, i))
-							}),
-							/* @__PURE__ */ jsx(Link, {
+								className: "dual-path-card-btn",
+								children: [/* @__PURE__ */ jsx("span", { children: "Grow Your Business" }), /* @__PURE__ */ jsx(ArrowRight, {
+									size: 16,
+									strokeWidth: 2.2,
+									className: "btn-arrow"
+								})]
+							})]
+						})
+					}), /* @__PURE__ */ jsx(ScrollReveal, {
+						delay: 200,
+						style: { height: "100%" },
+						children: /* @__PURE__ */ jsxs("div", {
+							className: "dual-path-card dual-path-card-creative",
+							children: [/* @__PURE__ */ jsxs("div", { children: [
+								/* @__PURE__ */ jsxs("div", {
+									className: "dual-path-card-header",
+									children: [/* @__PURE__ */ jsx("div", {
+										className: "dual-path-icon-box dual-path-icon-creative",
+										children: /* @__PURE__ */ jsx(Pencil, {
+											size: 21,
+											strokeWidth: 2
+										})
+									}), /* @__PURE__ */ jsx("h3", {
+										className: "dual-path-card-title",
+										children: "Creative Workspace"
+									})]
+								}),
+								/* @__PURE__ */ jsx("p", {
+									className: "dual-path-card-desc",
+									children: "Build your personal brand, showcase your work, and attract better opportunities."
+								}),
+								/* @__PURE__ */ jsxs("ul", {
+									className: "dual-path-feature-list",
+									children: [
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-creative",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "Personal branding"
+											})]
+										}),
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-creative",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "Portfolio and online presence"
+											})]
+										}),
+										/* @__PURE__ */ jsxs("li", {
+											className: "dual-path-feature-item",
+											children: [/* @__PURE__ */ jsx("span", {
+												className: "dual-path-check-badge dual-path-check-creative",
+												children: /* @__PURE__ */ jsx(Check, {
+													size: 13,
+													strokeWidth: 3
+												})
+											}), /* @__PURE__ */ jsx("span", {
+												className: "dual-path-feature-text",
+												children: "Content and audience growth"
+											})]
+										})
+									]
+								})
+							] }), /* @__PURE__ */ jsxs(Link, {
 								to: "/creative-workspace",
-								style: {
-									display: "block",
-									width: "100%",
-									padding: "16px",
-									backgroundColor: "var(--dark-bg)",
-									color: "var(--bg-primary)",
-									border: "none",
-									textAlign: "center",
-									borderRadius: "8px",
-									fontWeight: "600",
-									textDecoration: "none",
-									transition: "all 0.3s ease"
-								},
-								className: "path-btn-creative",
-								children: "Build Your Presence →"
-							})
-						]
-					})
+								className: "dual-path-card-btn",
+								children: [/* @__PURE__ */ jsx("span", { children: "Build Your Presence" }), /* @__PURE__ */ jsx(ArrowRight, {
+									size: 16,
+									strokeWidth: 2.2,
+									className: "btn-arrow"
+								})]
+							})]
+						})
+					})]
 				})]
-			})]
-		})
+			})
+		]
 	});
 };
 //#endregion
@@ -2980,61 +2982,6 @@ var HomePage = () => {
 								}, i))
 							})
 						})
-					})]
-				})
-			}),
-			/* @__PURE__ */ jsx("section", {
-				style: {
-					padding: "100px 0",
-					backgroundColor: "var(--bg-primary)"
-				},
-				children: /* @__PURE__ */ jsxs("div", {
-					className: "container",
-					children: [/* @__PURE__ */ jsx(ScrollReveal, {
-						delay: 0,
-						children: /* @__PURE__ */ jsx("h2", {
-							style: {
-								fontSize: "2.5rem",
-								textAlign: "center",
-								marginBottom: "60px"
-							},
-							children: "A clear plan. The right people. Work that moves you forward."
-						})
-					}), /* @__PURE__ */ jsx("div", {
-						style: {
-							display: "flex",
-							justifyContent: "center",
-							flexWrap: "wrap",
-							gap: "40px"
-						},
-						children: [
-							"Understand",
-							"Plan",
-							"Assemble",
-							"Deliver",
-							"Improve"
-						].map((step, i) => /* @__PURE__ */ jsxs(ScrollReveal, {
-							delay: 100 * i,
-							style: { textAlign: "center" },
-							children: [/* @__PURE__ */ jsx("div", {
-								style: {
-									width: "40px",
-									height: "40px",
-									borderRadius: "50%",
-									backgroundColor: "var(--gold-primary)",
-									color: "var(--dark-bg)",
-									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
-									margin: "0 auto 15px",
-									fontWeight: "bold"
-								},
-								children: i + 1
-							}), /* @__PURE__ */ jsx("h3", {
-								style: { fontSize: "1.2rem" },
-								children: step
-							})]
-						}, step))
 					})]
 				})
 			}),
@@ -4899,9 +4846,9 @@ var CreativeOrbit = () => {
 //#endregion
 //#region src/pages/CreativeWorkspacePage.tsx
 var CreativeWorkspacePage = () => {
-	const scrollToProcess = () => {
-		const processSection = document.getElementById("collaboration-process");
-		if (processSection) processSection.scrollIntoView({ behavior: "smooth" });
+	const scrollToRoles = () => {
+		const rolesSection = document.getElementById("roles");
+		if (rolesSection) rolesSection.scrollIntoView({ behavior: "smooth" });
 	};
 	return /* @__PURE__ */ jsxs("div", {
 		className: "cw-page",
@@ -4913,16 +4860,88 @@ var CreativeWorkspacePage = () => {
 					children: [/* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsxs(ScrollReveal, {
 						delay: 0,
 						children: [
-							/* @__PURE__ */ jsx("span", {
-								className: "cw-eyebrow",
-								children: "CREATIVE WORKSPACE · YOUR SKILLS, YOUR OPPORTUNITIES"
+							/* @__PURE__ */ jsxs("div", {
+								className: "cw-eyebrow-wrap",
+								children: [/* @__PURE__ */ jsx("span", {
+									className: "cw-eyebrow",
+									children: "CREATIVE WORKSPACE"
+								}), /* @__PURE__ */ jsx("span", { className: "cw-eyebrow-line" })]
 							}),
-							/* @__PURE__ */ jsx("h1", { children: "Your creativity deserves a bigger stage." }),
-							/* @__PURE__ */ jsx("p", { children: "Bring your skills to projects that value your expertise, and collaborate with S-Bloom to turn great ideas into meaningful work." }),
-							/* @__PURE__ */ jsx("button", {
-								onClick: scrollToProcess,
-								className: "cw-btn",
-								children: "Explore Collaboration"
+							/* @__PURE__ */ jsxs("h1", {
+								className: "cw-hero-title",
+								children: [
+									"Build your career",
+									/* @__PURE__ */ jsx("br", {}),
+									"with ",
+									/* @__PURE__ */ jsx("span", {
+										className: "cw-gold-text",
+										children: "sBLOOM."
+									})
+								]
+							}),
+							/* @__PURE__ */ jsx("p", {
+								className: "cw-hero-lead",
+								children: "Join a team that helps expertise-led businesses grow online."
+							}),
+							/* @__PURE__ */ jsx("p", {
+								className: "cw-hero-desc",
+								children: "We're always looking for curious, creative and driven people who want to work on real projects, learn continuously and make an impact."
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "cw-hero-actions",
+								children: [/* @__PURE__ */ jsxs("button", {
+									onClick: scrollToRoles,
+									className: "cw-btn-primary",
+									children: [/* @__PURE__ */ jsx("span", { children: "View Open Positions" }), /* @__PURE__ */ jsx(ArrowRight, {
+										size: 18,
+										strokeWidth: 2.2,
+										className: "cw-btn-arrow"
+									})]
+								}), /* @__PURE__ */ jsx(Link, {
+									to: "/contact",
+									className: "cw-btn-secondary",
+									children: "Apply Now"
+								})]
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "cw-hero-features-bar",
+								children: [
+									/* @__PURE__ */ jsxs("div", {
+										className: "cw-feature-badge",
+										children: [/* @__PURE__ */ jsx(Users, {
+											size: 18,
+											strokeWidth: 1.8,
+											className: "cw-feature-icon"
+										}), /* @__PURE__ */ jsx("span", { children: "Meaningful Work" })]
+									}),
+									/* @__PURE__ */ jsx("div", { className: "cw-feature-divider" }),
+									/* @__PURE__ */ jsxs("div", {
+										className: "cw-feature-badge",
+										children: [/* @__PURE__ */ jsx(TrendingUp, {
+											size: 18,
+											strokeWidth: 1.8,
+											className: "cw-feature-icon"
+										}), /* @__PURE__ */ jsx("span", { children: "Learn & Grow" })]
+									}),
+									/* @__PURE__ */ jsx("div", { className: "cw-feature-divider" }),
+									/* @__PURE__ */ jsxs("div", {
+										className: "cw-feature-badge",
+										children: [/* @__PURE__ */ jsx(Sparkles, {
+											size: 18,
+											strokeWidth: 1.8,
+											className: "cw-feature-icon"
+										}), /* @__PURE__ */ jsx("span", { children: "Creative Environment" })]
+									}),
+									/* @__PURE__ */ jsx("div", { className: "cw-feature-divider" }),
+									/* @__PURE__ */ jsxs("div", {
+										className: "cw-feature-badge",
+										children: [/* @__PURE__ */ jsx(Laptop, {
+											size: 18,
+											strokeWidth: 1.8,
+											className: "cw-feature-icon"
+										}), /* @__PURE__ */ jsx("span", { children: "Work on Live Projects" })]
+									})
+								]
 							})
 						]
 					}) }), /* @__PURE__ */ jsx("div", {
@@ -5024,6 +5043,7 @@ var CreativeWorkspacePage = () => {
 				})]
 			}),
 			/* @__PURE__ */ jsx("section", {
+				id: "roles",
 				className: "cw-roles-section",
 				children: /* @__PURE__ */ jsxs("div", {
 					className: "container",
@@ -5147,168 +5167,467 @@ var creative_workspace_default = UNSAFE_withComponentProps(function Route() {
 	return /* @__PURE__ */ jsx(CreativeWorkspacePage, {});
 });
 //#endregion
+//#region \0@oxc-project+runtime@0.150.0/helpers/esm/typeof.js
+function _typeof(o) {
+	"@babel/helpers - typeof";
+	return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o) {
+		return typeof o;
+	} : function(o) {
+		return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+	}, _typeof(o);
+}
+//#endregion
+//#region \0@oxc-project+runtime@0.150.0/helpers/esm/toPrimitive.js
+function toPrimitive(t, r) {
+	if ("object" != _typeof(t) || !t) return t;
+	var e = t[Symbol.toPrimitive];
+	if (void 0 !== e) {
+		var i = e.call(t, r || "default");
+		if ("object" != _typeof(i)) return i;
+		throw new TypeError("@@toPrimitive must return a primitive value.");
+	}
+	return ("string" === r ? String : Number)(t);
+}
+//#endregion
+//#region \0@oxc-project+runtime@0.150.0/helpers/esm/toPropertyKey.js
+function toPropertyKey(t) {
+	var i = toPrimitive(t, "string");
+	return "symbol" == _typeof(i) ? i : i + "";
+}
+//#endregion
+//#region \0@oxc-project+runtime@0.150.0/helpers/esm/defineProperty.js
+function _defineProperty(e, r, t) {
+	return (r = toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+		value: t,
+		enumerable: !0,
+		configurable: !0,
+		writable: !0
+	}) : e[r] = t, e;
+}
+//#endregion
+//#region \0@oxc-project+runtime@0.150.0/helpers/esm/objectSpread2.js
+function ownKeys(e, r) {
+	var t = Object.keys(e);
+	if (Object.getOwnPropertySymbols) {
+		var o = Object.getOwnPropertySymbols(e);
+		r && (o = o.filter(function(r) {
+			return Object.getOwnPropertyDescriptor(e, r).enumerable;
+		})), t.push.apply(t, o);
+	}
+	return t;
+}
+function _objectSpread2(e) {
+	for (var r = 1; r < arguments.length; r++) {
+		var t = null != arguments[r] ? arguments[r] : {};
+		r % 2 ? ownKeys(Object(t), !0).forEach(function(r) {
+			_defineProperty(e, r, t[r]);
+		}) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r) {
+			Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+		});
+	}
+	return e;
+}
+//#endregion
 //#region src/pages/ContactPage.tsx
 var ContactPage = () => {
+	const [formData, setFormData] = useState({
+		fullName: "",
+		organization: "",
+		email: "",
+		phone: "",
+		industry: "",
+		improve: ""
+	});
+	const [submitted, setSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => _objectSpread2(_objectSpread2({}, prev), {}, { [name]: value }));
+	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setIsSubmitting(true);
+		setTimeout(() => {
+			setIsSubmitting(false);
+			setSubmitted(true);
+		}, 600);
+	};
+	const handleReset = () => {
+		setSubmitted(false);
+		setFormData({
+			fullName: "",
+			organization: "",
+			email: "",
+			phone: "",
+			industry: "",
+			improve: ""
+		});
 	};
 	return /* @__PURE__ */ jsxs("div", {
-		className: "page phase5-wrapper",
-		children: [/* @__PURE__ */ jsx("section", {
-			className: "phase5-hero",
-			children: /* @__PURE__ */ jsx("div", {
-				className: "container text-center",
-				children: /* @__PURE__ */ jsxs(ScrollReveal, {
-					delay: 0,
+		className: "contact-page-wrapper",
+		children: [/* @__PURE__ */ jsxs("div", {
+			className: "contact-bg-backdrop",
+			"aria-hidden": "true",
+			children: [/* @__PURE__ */ jsx("img", {
+				src: "/contact-silk-gold-bg.png",
+				alt: "",
+				className: "contact-bg-image"
+			}), /* @__PURE__ */ jsx("div", { className: "contact-bg-light-tint" })]
+		}), /* @__PURE__ */ jsx("div", {
+			className: "contact-master-container",
+			children: /* @__PURE__ */ jsxs("div", {
+				className: "contact-split-grid",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "contact-left-col",
 					children: [
-						/* @__PURE__ */ jsx("span", {
-							className: "phase5-hero-label",
-							children: "STRATEGY REQUEST"
+						/* @__PURE__ */ jsxs("div", {
+							className: "contact-eyebrow",
+							children: [/* @__PURE__ */ jsx("span", {
+								className: "contact-eyebrow-text",
+								children: "GET IN TOUCH"
+							}), /* @__PURE__ */ jsx("span", { className: "contact-eyebrow-line" })]
 						}),
-						/* @__PURE__ */ jsx("h1", {
-							className: "phase5-hero-title mx-auto",
-							children: "Let's discuss your digital growth."
+						/* @__PURE__ */ jsxs("h1", {
+							className: "contact-hero-title",
+							children: [
+								"Let’s discuss",
+								/* @__PURE__ */ jsx("br", {}),
+								"your digital",
+								/* @__PURE__ */ jsx("br", {}),
+								/* @__PURE__ */ jsx("span", {
+									className: "title-gold-text",
+									children: "growth."
+								})
+							]
 						}),
 						/* @__PURE__ */ jsx("p", {
-							className: "phase5-hero-desc mx-auto",
-							children: "Tell us about your organization and what you are trying to achieve. We'll help you diagnose the gaps and find the right strategic starting point."
-						})
-					]
-				})
-			})
-		}), /* @__PURE__ */ jsx("section", {
-			className: "phase5-content",
-			children: /* @__PURE__ */ jsx("div", {
-				className: "container",
-				children: /* @__PURE__ */ jsx("div", {
-					className: "contact-form-container",
-					children: /* @__PURE__ */ jsx(ScrollReveal, {
-						delay: 100,
-						children: /* @__PURE__ */ jsxs("form", {
-							className: "contact-form",
-							onSubmit: handleSubmit,
+							className: "contact-hero-desc",
+							children: "Tell us about your organization and what you are trying to achieve. We'll help you identify the right opportunities and next steps."
+						}),
+						/* @__PURE__ */ jsxs("div", {
+							className: "contact-process-list",
 							children: [
 								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "fullName",
-										children: "Full Name"
-									}), /* @__PURE__ */ jsx("input", {
-										type: "text",
-										id: "fullName",
-										required: true
+									className: "contact-process-item",
+									children: [/* @__PURE__ */ jsx("div", {
+										className: "contact-process-badge",
+										children: /* @__PURE__ */ jsx(MessageSquare, {
+											size: 18,
+											strokeWidth: 1.8
+										})
+									}), /* @__PURE__ */ jsxs("div", {
+										className: "contact-process-content",
+										children: [/* @__PURE__ */ jsx("h4", {
+											className: "contact-process-title",
+											children: "Understand"
+										}), /* @__PURE__ */ jsx("p", {
+											className: "contact-process-text",
+											children: "We listen to your goals and challenges."
+										})]
 									})]
 								}),
 								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "organization",
-										children: "Organization Name"
-									}), /* @__PURE__ */ jsx("input", {
-										type: "text",
-										id: "organization",
-										required: true
+									className: "contact-process-item",
+									children: [/* @__PURE__ */ jsx("div", {
+										className: "contact-process-badge",
+										children: /* @__PURE__ */ jsx(Lightbulb, {
+											size: 18,
+											strokeWidth: 1.8
+										})
+									}), /* @__PURE__ */ jsxs("div", {
+										className: "contact-process-content",
+										children: [/* @__PURE__ */ jsx("h4", {
+											className: "contact-process-title",
+											children: "Strategize"
+										}), /* @__PURE__ */ jsx("p", {
+											className: "contact-process-text",
+											children: "We identify the right opportunities."
+										})]
 									})]
 								}),
 								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "email",
-										children: "Email Address"
-									}), /* @__PURE__ */ jsx("input", {
-										type: "email",
-										id: "email",
-										required: true
+									className: "contact-process-item",
+									children: [/* @__PURE__ */ jsx("div", {
+										className: "contact-process-badge",
+										children: /* @__PURE__ */ jsx(BarChart3, {
+											size: 18,
+											strokeWidth: 1.8
+										})
+									}), /* @__PURE__ */ jsxs("div", {
+										className: "contact-process-content",
+										children: [/* @__PURE__ */ jsx("h4", {
+											className: "contact-process-title",
+											children: "Grow Together"
+										}), /* @__PURE__ */ jsx("p", {
+											className: "contact-process-text",
+											children: "We build a clear plan for measurable results."
+										})]
 									})]
-								}),
-								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "phone",
-										children: "Phone Number"
-									}), /* @__PURE__ */ jsx("input", {
-										type: "tel",
-										id: "phone"
-									})]
-								}),
-								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "industry",
-										children: "Industry"
-									}), /* @__PURE__ */ jsxs("select", {
-										id: "industry",
-										required: true,
-										children: [
-											/* @__PURE__ */ jsx("option", {
-												value: "",
-												children: "Select an industry..."
-											}),
-											/* @__PURE__ */ jsx("option", {
-												value: "Education",
-												children: "Education"
-											}),
-											/* @__PURE__ */ jsx("option", {
-												value: "Healthcare",
-												children: "Healthcare"
-											}),
-											/* @__PURE__ */ jsx("option", {
-												value: "Consulting & Professional Services",
-												children: "Consulting & Professional Services"
-											}),
-											/* @__PURE__ */ jsx("option", {
-												value: "Other",
-												children: "Other"
-											})
-										]
-									})]
-								}),
-								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "challenge",
-										children: "What is your biggest current marketing challenge?"
-									}), /* @__PURE__ */ jsx("textarea", {
-										id: "challenge",
-										rows: 4,
-										required: true
-									})]
-								}),
-								/* @__PURE__ */ jsxs("div", {
-									className: "form-group",
-									children: [/* @__PURE__ */ jsx("label", {
-										htmlFor: "goals",
-										children: "What are your primary business goals for the next 6 months?"
-									}), /* @__PURE__ */ jsx("textarea", {
-										id: "goals",
-										rows: 4,
-										required: true
-									})]
-								}),
-								/* @__PURE__ */ jsx("button", {
-									type: "submit",
-									className: "btn btn-primary submit-btn",
-									disabled: true,
-									style: {
-										opacity: .5,
-										cursor: "not-allowed"
-									},
-									children: "Request Strategy Consultation"
-								}),
-								/* @__PURE__ */ jsx("div", {
-									className: "form-note",
-									style: {
-										color: "var(--text-secondary)",
-										fontStyle: "italic",
-										marginTop: "16px",
-										textAlign: "center"
-									},
-									children: "Submission is currently disabled. We are waiting on configuration for a secure backend endpoint to receive these requests."
 								})
 							]
 						})
+					]
+				}), /* @__PURE__ */ jsx("div", {
+					className: "contact-right-col",
+					children: /* @__PURE__ */ jsxs("div", {
+						className: "contact-card",
+						children: [
+							/* @__PURE__ */ jsxs("div", {
+								className: "contact-card-badge",
+								children: [
+									/* @__PURE__ */ jsx("span", { className: "contact-card-badge-dot" }),
+									/* @__PURE__ */ jsx("span", {
+										className: "contact-card-badge-text",
+										children: "CONTACT sBLOOM"
+									}),
+									/* @__PURE__ */ jsx("span", { className: "contact-card-badge-line" })
+								]
+							}),
+							/* @__PURE__ */ jsx("h2", {
+								className: "contact-card-title",
+								children: "Share a few details"
+							}),
+							/* @__PURE__ */ jsx("p", {
+								className: "contact-card-subtitle",
+								children: "We'll get back to you with the right next steps."
+							}),
+							submitted ? /* @__PURE__ */ jsxs("div", {
+								className: "contact-success-card",
+								children: [
+									/* @__PURE__ */ jsx("div", {
+										className: "contact-success-icon-wrap",
+										children: /* @__PURE__ */ jsx(CheckCircle2, {
+											size: 32,
+											strokeWidth: 2
+										})
+									}),
+									/* @__PURE__ */ jsx("h3", {
+										className: "contact-success-title",
+										children: "Message Received!"
+									}),
+									/* @__PURE__ */ jsx("p", {
+										className: "contact-success-msg",
+										children: "Thank you for reaching out. We have received your details and our team will get back to you with tailored strategic recommendations within 24 hours."
+									}),
+									/* @__PURE__ */ jsx("button", {
+										type: "button",
+										className: "contact-reset-btn",
+										onClick: handleReset,
+										children: "Send Another Response"
+									})
+								]
+							}) : /* @__PURE__ */ jsxs("form", {
+								className: "contact-form",
+								onSubmit: handleSubmit,
+								children: [
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "fullName",
+											className: "contact-field-label",
+											children: ["Full Name ", /* @__PURE__ */ jsx("span", {
+												className: "contact-req-star",
+												children: "*"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap",
+											children: [/* @__PURE__ */ jsx(User, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon"
+											}), /* @__PURE__ */ jsx("input", {
+												type: "text",
+												id: "fullName",
+												name: "fullName",
+												required: true,
+												placeholder: "Enter your full name",
+												className: "contact-input",
+												value: formData.fullName,
+												onChange: handleChange
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "organization",
+											className: "contact-field-label",
+											children: ["Organization Name ", /* @__PURE__ */ jsx("span", {
+												className: "contact-req-star",
+												children: "*"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap",
+											children: [/* @__PURE__ */ jsx(Building2, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon"
+											}), /* @__PURE__ */ jsx("input", {
+												type: "text",
+												id: "organization",
+												name: "organization",
+												required: true,
+												placeholder: "Enter your organization name",
+												className: "contact-input",
+												value: formData.organization,
+												onChange: handleChange
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "email",
+											className: "contact-field-label",
+											children: ["Email Address ", /* @__PURE__ */ jsx("span", {
+												className: "contact-req-star",
+												children: "*"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap",
+											children: [/* @__PURE__ */ jsx(Mail, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon"
+											}), /* @__PURE__ */ jsx("input", {
+												type: "email",
+												id: "email",
+												name: "email",
+												required: true,
+												placeholder: "you@company.com",
+												className: "contact-input",
+												value: formData.email,
+												onChange: handleChange
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "phone",
+											className: "contact-field-label",
+											children: ["Phone Number ", /* @__PURE__ */ jsx("span", {
+												className: "contact-req-star",
+												children: "*"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap",
+											children: [/* @__PURE__ */ jsx(Phone, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon"
+											}), /* @__PURE__ */ jsx("input", {
+												type: "tel",
+												id: "phone",
+												name: "phone",
+												required: true,
+												placeholder: "+91 98765 43210",
+												className: "contact-input",
+												value: formData.phone,
+												onChange: handleChange
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "industry",
+											className: "contact-field-label",
+											children: ["Industry ", /* @__PURE__ */ jsx("span", {
+												className: "contact-req-star",
+												children: "*"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap",
+											children: [/* @__PURE__ */ jsx(LayoutGrid, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon"
+											}), /* @__PURE__ */ jsxs("select", {
+												id: "industry",
+												name: "industry",
+												required: true,
+												className: "contact-select",
+												value: formData.industry,
+												onChange: handleChange,
+												children: [
+													/* @__PURE__ */ jsx("option", {
+														value: "",
+														children: "Select an industry..."
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Education",
+														children: "Education"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Healthcare",
+														children: "Healthcare"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Consulting & Professional Services",
+														children: "Consulting & Professional Services"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Technology & Software",
+														children: "Technology & Software"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "E-Commerce & Retail",
+														children: "E-Commerce & Retail"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Financial Services",
+														children: "Financial Services"
+													}),
+													/* @__PURE__ */ jsx("option", {
+														value: "Other",
+														children: "Other"
+													})
+												]
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("div", {
+										className: "contact-field-group",
+										children: [/* @__PURE__ */ jsxs("label", {
+											htmlFor: "improve",
+											className: "contact-field-label",
+											children: ["What would you like to improve? ", /* @__PURE__ */ jsx("span", {
+												className: "contact-opt-tag",
+												children: "(Optional)"
+											})]
+										}), /* @__PURE__ */ jsxs("div", {
+											className: "contact-input-wrap contact-textarea-wrap",
+											children: [/* @__PURE__ */ jsx(FileText, {
+												size: 15,
+												strokeWidth: 1.8,
+												className: "contact-input-icon contact-textarea-icon"
+											}), /* @__PURE__ */ jsx("textarea", {
+												id: "improve",
+												name: "improve",
+												rows: 2,
+												placeholder: "Tell us about your goals, challenges, or what you'd like to improve...",
+												className: "contact-textarea",
+												value: formData.improve,
+												onChange: handleChange
+											})]
+										})]
+									}),
+									/* @__PURE__ */ jsxs("button", {
+										type: "submit",
+										className: "contact-submit-btn",
+										disabled: isSubmitting,
+										children: [/* @__PURE__ */ jsx("span", { children: isSubmitting ? "Planning Next Step..." : "Plan My Next Step" }), /* @__PURE__ */ jsx(ArrowRight, {
+											size: 15,
+											strokeWidth: 2.4,
+											className: "btn-arrow-icon"
+										})]
+									})
+								]
+							})
+						]
 					})
-				})
+				})]
 			})
 		})]
 	});
@@ -5361,13 +5680,13 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/root-CPXOk9BA.js",
+			"module": "/assets/root-D2PA7fMm.js",
 			"imports": [
 				"/assets/jsx-runtime-BHANhu7e.js",
-				"/assets/createLucideIcon-KQ4A00j4.js",
-				"/assets/arrow-right-CzFDBub1.js",
-				"/assets/camera-D5K759Qh.js",
-				"/assets/proxy-CTlUSfUY.js"
+				"/assets/arrow-right-We32XTf0.js",
+				"/assets/camera-DFlvwyjA.js",
+				"/assets/proxy-2z8OEwB7.js",
+				"/assets/phone-OfcaQyEJ.js"
 			],
 			"css": ["/assets/root-__OHG7lq.css"],
 			"clientActionModule": void 0,
@@ -5388,17 +5707,18 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/home-DVgIifNx.js",
+			"module": "/assets/home-nl8wYsfO.js",
 			"imports": [
 				"/assets/jsx-runtime-BHANhu7e.js",
-				"/assets/createLucideIcon-KQ4A00j4.js",
-				"/assets/camera-D5K759Qh.js",
-				"/assets/check-CvWl0biH.js",
-				"/assets/film-D4UZZ2Yn.js",
-				"/assets/proxy-CTlUSfUY.js",
+				"/assets/arrow-right-We32XTf0.js",
+				"/assets/camera-DFlvwyjA.js",
+				"/assets/check-B3QaiORv.js",
+				"/assets/file-text-C2cXeDTY.js",
+				"/assets/film-BhO0SBg_.js",
+				"/assets/proxy-2z8OEwB7.js",
 				"/assets/ScrollReveal-Dh9yN8p5.js"
 			],
-			"css": ["/assets/home-ZedgoTWm.css"],
+			"css": ["/assets/home-B_n4jYOw.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -5417,12 +5737,13 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/education-DSD34aHj.js",
+			"module": "/assets/education-BrOYc295.js",
 			"imports": [
 				"/assets/jsx-runtime-BHANhu7e.js",
-				"/assets/createLucideIcon-KQ4A00j4.js",
-				"/assets/arrow-right-CzFDBub1.js",
-				"/assets/check-CvWl0biH.js",
+				"/assets/arrow-right-We32XTf0.js",
+				"/assets/circle-check-CCXuOjDp.js",
+				"/assets/check-B3QaiORv.js",
+				"/assets/trending-up-ty446-cJ.js",
 				"/assets/ScrollReveal-Dh9yN8p5.js"
 			],
 			"css": ["/assets/education-so6YjTNq.css"],
@@ -5612,15 +5933,17 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/creative-workspace-CY_93WCQ.js",
+			"module": "/assets/creative-workspace-IdNcVbT5.js",
 			"imports": [
 				"/assets/jsx-runtime-BHANhu7e.js",
-				"/assets/createLucideIcon-KQ4A00j4.js",
-				"/assets/camera-D5K759Qh.js",
-				"/assets/film-D4UZZ2Yn.js",
+				"/assets/arrow-right-We32XTf0.js",
+				"/assets/camera-DFlvwyjA.js",
+				"/assets/file-text-C2cXeDTY.js",
+				"/assets/film-BhO0SBg_.js",
+				"/assets/trending-up-ty446-cJ.js",
 				"/assets/ScrollReveal-Dh9yN8p5.js"
 			],
-			"css": ["/assets/creative-workspace-D-RDklI0.css"],
+			"css": ["/assets/creative-workspace-B3xJ1GNi.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
@@ -5639,17 +5962,23 @@ var server_manifest_default = {
 			"hasClientMiddleware": false,
 			"hasDefaultExport": true,
 			"hasErrorBoundary": false,
-			"module": "/assets/contact-D5rpMIHQ.js",
-			"imports": ["/assets/jsx-runtime-BHANhu7e.js", "/assets/ScrollReveal-Dh9yN8p5.js"],
-			"css": [],
+			"module": "/assets/contact-HYGjSy55.js",
+			"imports": [
+				"/assets/jsx-runtime-BHANhu7e.js",
+				"/assets/arrow-right-We32XTf0.js",
+				"/assets/circle-check-CCXuOjDp.js",
+				"/assets/file-text-C2cXeDTY.js",
+				"/assets/phone-OfcaQyEJ.js"
+			],
+			"css": ["/assets/contact-CoDvOEga.css"],
 			"clientActionModule": void 0,
 			"clientLoaderModule": void 0,
 			"clientMiddlewareModule": void 0,
 			"hydrateFallbackModule": void 0
 		}
 	},
-	"url": "/assets/manifest-97d48d40.js",
-	"version": "97d48d40",
+	"url": "/assets/manifest-420175b5.js",
+	"version": "420175b5",
 	"sri": void 0
 };
 //#endregion

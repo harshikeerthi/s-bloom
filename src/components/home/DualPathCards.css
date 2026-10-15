@@ -1,0 +1,390 @@
+/* ==========================================================================
+   DUAL PATH CARDS SECTION (HOW CAN S-BLOOM HELP YOU GROW)
+   Champagne/ivory glowing background, delicate flowing curves, and dual cards
+   ========================================================================== */
+
+.dual-path-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 0 110px;
+  background-color: #FAF6EE;
+  background: 
+    radial-gradient(ellipse at 85% 15%, #FFF6E2 0%, rgba(255, 246, 226, 0.5) 40%, transparent 70%),
+    radial-gradient(ellipse at 15% 85%, #F4ECE0 0%, rgba(244, 236, 224, 0.6) 45%, transparent 75%),
+    #FAF6EE;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Ambient Radial Soft Glow */
+.dual-path-ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.75) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(244, 236, 224, 0.45) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle Flowing Golden & Champagne Curves Overlay */
+.dual-path-curves-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dual-path-curves-svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+/* Decorative Sparkles & Dots Layer */
+.dual-path-sparkles-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dual-path-sparkle-star {
+  position: absolute;
+  color: #CCA046;
+  opacity: 0.75;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dual-path-sparkle-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #CCA046;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dp-sparkle-top-left-main {
+  top: 14%;
+  left: 9%;
+  font-size: 15px;
+  animation: dpGentlePulse 5s ease-in-out infinite;
+}
+
+.dp-sparkle-top-left-dot {
+  top: 24%;
+  left: 6.5%;
+  width: 5px;
+  height: 5px;
+  animation: dpGentlePulse 6s ease-in-out infinite 0.5s;
+}
+
+.dp-sparkle-right-main {
+  top: 60%;
+  right: 4%;
+  font-size: 15px;
+  animation: dpGentlePulse 5.5s ease-in-out infinite 1s;
+}
+
+.dp-sparkle-right-dot {
+  top: 68%;
+  right: 6%;
+  width: 5px;
+  height: 5px;
+  animation: dpGentlePulse 6s ease-in-out infinite 1.5s;
+}
+
+@keyframes dpGentlePulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.95); }
+  50% { opacity: 0.85; transform: scale(1.1); }
+}
+
+/* Master Centered Container */
+.dual-path-container {
+  position: relative;
+  z-index: 2;
+  width: 92%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   HEADER SECTION: TITLE & SUBTITLE (CENTERED)
+   ========================================================================== */
+
+.dual-path-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.dual-path-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #1A1715;
+  margin-bottom: 10px;
+}
+
+.dual-path-title .title-highlight-gold {
+  color: #B57B3A;
+  background: linear-gradient(135deg, #BD813C 0%, #9B6024 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.dual-path-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: #635A50;
+  font-weight: 450;
+  margin: 0;
+}
+
+/* ==========================================================================
+   DUAL PATH CARDS GRID
+   ========================================================================== */
+
+.dual-path-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+.dual-path-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-radius: 22px;
+  padding: 36px 36px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.28s ease;
+  box-sizing: border-box;
+}
+
+/* Card 1: sBLOOM for Business */
+.dual-path-card-business {
+  border: 1.5px solid #F0DFCA;
+  border-top: 2px solid #E4CCA6;
+  box-shadow: 
+    0 16px 42px -10px rgba(180, 140, 90, 0.12),
+    0 4px 14px -2px rgba(60, 40, 20, 0.04);
+}
+
+.dual-path-card-business:hover {
+  border-color: #DEBF92;
+  transform: translateY(-3px);
+  box-shadow: 
+    0 22px 50px -10px rgba(180, 140, 90, 0.18),
+    0 6px 18px -2px rgba(60, 40, 20, 0.06);
+}
+
+/* Card 2: Creative Workspace */
+.dual-path-card-creative {
+  border: 1.5px solid #E6DDF2;
+  border-top: 2px solid #D5C2E8;
+  box-shadow: 
+    0 16px 42px -10px rgba(140, 110, 180, 0.10),
+    0 4px 14px -2px rgba(60, 40, 20, 0.04);
+}
+
+.dual-path-card-creative:hover {
+  border-color: #CBB4E8;
+  transform: translateY(-3px);
+  box-shadow: 
+    0 22px 50px -10px rgba(140, 110, 180, 0.16),
+    0 6px 18px -2px rgba(60, 40, 20, 0.06);
+}
+
+/* Card Header (Icon Box + Title) */
+.dual-path-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.dual-path-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dual-path-icon-business {
+  background: #FAF0DF;
+  border: 1.2px solid #ECD7BA;
+  color: #B57A36;
+}
+
+.dual-path-icon-creative {
+  background: #F2ECFA;
+  border: 1.2px solid #DFD2F3;
+  color: #825DB8;
+}
+
+.dual-path-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.38rem;
+  font-weight: 750;
+  color: #1A1715;
+  letter-spacing: -0.015em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Description Text */
+.dual-path-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: #585047;
+  margin: 0 0 24px 0;
+}
+
+/* Feature List */
+.dual-path-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dual-path-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dual-path-check-badge {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dual-path-check-business {
+  background: #F7EDDD;
+  border: 1.2px solid #E5CFA8;
+  color: #B57936;
+}
+
+.dual-path-check-creative {
+  background: #EFE7F8;
+  border: 1.2px solid #D9C7F2;
+  color: #825DB8;
+}
+
+.dual-path-feature-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #241F1A;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Bottom Button (Grow Your Business / Build Your Presence) */
+.dual-path-card-btn {
+  width: 100%;
+  height: 48px;
+  background: #1C1917;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(25, 20, 15, 0.25);
+  box-sizing: border-box;
+}
+
+.dual-path-card-btn:hover {
+  background: #2D2723;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(25, 20, 15, 0.35);
+  color: #FFFFFF;
+}
+
+.dual-path-card-btn:active {
+  transform: translateY(0);
+}
+
+.dual-path-card-btn .btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.dual-path-card-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .dual-path-section {
+    padding: 72px 0 80px;
+  }
+
+  .dual-path-header {
+    margin-bottom: 36px;
+  }
+
+  .dual-path-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .dual-path-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dual-path-title {
+    font-size: 1.95rem;
+  }
+
+  .dual-path-card-title {
+    font-size: 1.25rem;
+  }
+
+  .dual-path-card {
+    padding: 24px 20px;
+  }
+}

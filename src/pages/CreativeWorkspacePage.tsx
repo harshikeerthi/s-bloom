@@ -1,15 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { ScrollReveal } from "../components/ScrollReveal";
-import { Film, Camera, PenTool, FileText, MonitorSmartphone, Target, PlayCircle, Rocket } from 'lucide-react';
+import {
+  Film,
+  Camera,
+  PenTool,
+  FileText,
+  MonitorSmartphone,
+  Target,
+  PlayCircle,
+  Rocket,
+  Users,
+  TrendingUp,
+  Sparkles,
+  Laptop,
+  ArrowRight,
+} from 'lucide-react';
 import { CreativeOrbit } from '../components/CreativeOrbit';
 import './CreativeWorkspacePage.css';
 
 export const CreativeWorkspacePage = () => {
-  const scrollToProcess = () => {
-    const processSection = document.getElementById('collaboration-process');
-    if (processSection) {
-      processSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToRoles = () => {
+    const rolesSection = document.getElementById('roles');
+    if (rolesSection) {
+      rolesSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -20,14 +34,55 @@ export const CreativeWorkspacePage = () => {
         <div className="container cw-hero-grid">
           <div>
             <ScrollReveal delay={0}>
-              <span className="cw-eyebrow">CREATIVE WORKSPACE · YOUR SKILLS, YOUR OPPORTUNITIES</span>
-              <h1>Your creativity deserves a bigger stage.</h1>
-              <p>
-                Bring your skills to projects that value your expertise, and collaborate with S-Bloom to turn great ideas into meaningful work.
+              <div className="cw-eyebrow-wrap">
+                <span className="cw-eyebrow">CREATIVE WORKSPACE</span>
+                <span className="cw-eyebrow-line" />
+              </div>
+
+              <h1 className="cw-hero-title">
+                Build your career<br />
+                with <span className="cw-gold-text">sBLOOM.</span>
+              </h1>
+
+              <p className="cw-hero-lead">
+                Join a team that helps expertise-led businesses grow online.
               </p>
-              <button onClick={scrollToProcess} className="cw-btn">
-                Explore Collaboration
-              </button>
+
+              <p className="cw-hero-desc">
+                We're always looking for curious, creative and driven people who want to work on real projects, learn continuously and make an impact.
+              </p>
+
+              <div className="cw-hero-actions">
+                <button onClick={scrollToRoles} className="cw-btn-primary">
+                  <span>View Open Positions</span>
+                  <ArrowRight size={18} strokeWidth={2.2} className="cw-btn-arrow" />
+                </button>
+                <Link to="/contact" className="cw-btn-secondary">
+                  Apply Now
+                </Link>
+              </div>
+
+              <div className="cw-hero-features-bar">
+                <div className="cw-feature-badge">
+                  <Users size={18} strokeWidth={1.8} className="cw-feature-icon" />
+                  <span>Meaningful Work</span>
+                </div>
+                <div className="cw-feature-divider" />
+                <div className="cw-feature-badge">
+                  <TrendingUp size={18} strokeWidth={1.8} className="cw-feature-icon" />
+                  <span>Learn & Grow</span>
+                </div>
+                <div className="cw-feature-divider" />
+                <div className="cw-feature-badge">
+                  <Sparkles size={18} strokeWidth={1.8} className="cw-feature-icon" />
+                  <span>Creative Environment</span>
+                </div>
+                <div className="cw-feature-divider" />
+                <div className="cw-feature-badge">
+                  <Laptop size={18} strokeWidth={1.8} className="cw-feature-icon" />
+                  <span>Work on Live Projects</span>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
           
@@ -90,7 +145,7 @@ export const CreativeWorkspacePage = () => {
       </section>
 
       {/* Roles Section */}
-      <section className="cw-roles-section">
+      <section id="roles" className="cw-roles-section">
         <div className="container">
           <div className="cw-section-header">
             <ScrollReveal delay={100}>
